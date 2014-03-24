@@ -1,0 +1,21 @@
+VBScript XML Handler:
+
+Simple .vbs script handling requests to XML files.
+Its main purpose is to be used by other programs ( for example, .hta apps ) to easily update their configuration files.
+
+A "tree" request may be supported in the future, but it's not present in the current module responsible for XML handling.
+
+-------- Usage --------
+
+The program accept 2 methods: 'get' and 'set'
+
+Examples:
+
+getting the value of the item present at the XPath "/AppConfig/CheckProcOrWinRunning" in the XML file "app_config__barebone.xml"
+.\handle_XML_file.vbs .\app_config__barebone.xml /AppConfig/CheckProcOrWinRunning get
+
+setting the value of the item present at the XPath "/AppConfig/CheckProcOrWinRunning" in the XML file "app_config__barebone.xml" to 'true'
+.\handle_XML_file.vbs .\app_config__barebone.xml /AppConfig/CheckProcOrWinRunning set true
+
+
+Enjoy ;p
